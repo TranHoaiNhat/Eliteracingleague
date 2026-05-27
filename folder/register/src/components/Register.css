@@ -1,0 +1,280 @@
+:root {
+    --primary-color: #8B0000;
+    --border-color: #e8caca;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.register-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.register-form-section {
+    flex: 1;
+    background: white;
+    /* FIXED */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+}
+
+/* LOGO */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.brand-logo h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/* HEADING */
+.register-card h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: left;
+    /* FIXED */
+    color: #1f3b57;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    text-align: left;
+    /* FIXED */
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #1f3b57;
+}
+
+input,
+select {
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--border-color);
+    padding: 0 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    text-align: left;
+}
+
+.select-wrapper,
+.input-wrapper {
+    position: relative;
+}
+
+select {
+    appearance: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.double-row {
+    display: flex;
+    gap: 16px;
+}
+
+.double-row .form-group {
+    flex: 1;
+}
+
+/* VERIFY EMAIL */
+.verify-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    text-align: left;
+}
+
+/* PASSWORD */
+.password-strength {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.password-strength div {
+    flex: 1;
+    height: 4px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.password-hint {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 6px;
+    text-align: left;
+}
+
+/* TERMS */
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.terms-row input {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+}
+
+.terms-row a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* BUTTON */
+.register-button {
+    width: 100%;
+    height: 48px;
+    background: #a30000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.bottom-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* RIGHT SIDE */
+.register-hero-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    text-align: left;
+    /* FIXED */
+    color: white;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 18px;
+    font-weight: 800;
+    text-align: left;
+    /* FIXED */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    /* FIXED */
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+    .register-hero-section {
+        display: none;
+    }
+
+    .register-form-section {
+        width: 100%;
+    }
+
+    .double-row {
+        flex-direction: column;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
