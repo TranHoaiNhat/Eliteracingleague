@@ -3,6 +3,7 @@ using Eliteracingleague.API.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Eliteracingleague.API.Constants;
 
 namespace Eliteracingleague.API.Controllers;
 
