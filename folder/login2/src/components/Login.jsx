@@ -1,35 +1,57 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Login.css';
+
 import horseRacing from '../assets/horse-racing.jpg';
 import icon from '../assets/icon.png';
-import { FaEnvelope, FaEyeSlash, FaChevronDown } from 'react-icons/fa';
+
+import {
+    FaEnvelope,
+    FaEyeSlash,
+    FaChevronDown
+} from 'react-icons/fa';
 
 const Login = () => {
     return (
         <div className="login-container">
 
-            {/* Left Side */}
+            {/* LEFT SIDE */}
             <div className="hero-section">
-                <img src={horseRacing} alt="Horse Racing" className="hero-image" />
+                <img
+                    src={horseRacing}
+                    alt="Horse Racing"
+                    className="hero-image"
+                />
+
                 <div className="overlay"></div>
 
                 <div className="hero-content">
-                    <h1>Manage Horse Racing Tournaments Professionally</h1>
-                    <p>The elite management platform for racing professionals.</p>
+                    <h1>
+                        Manage Horse Racing Tournaments Professionally
+                    </h1>
+
+                    <p>
+                        The elite management platform for racing professionals.
+                    </p>
                 </div>
             </div>
 
-            {/* Right Side */}
+            {/* RIGHT SIDE */}
             <div className="form-section">
+
                 <div className="login-card">
 
+                    {/* HEADER */}
                     <div className="card-header">
+
                         <div className="brand-logo">
                             <img
                                 src={icon}
                                 alt="Elite Racing League Logo"
                                 className="logo-icon"
                             />
+
                             <h2>Elite Racing League</h2>
                         </div>
 
@@ -38,73 +60,111 @@ const Login = () => {
                         </p>
                     </div>
 
+                    {/* FORM */}
                     <form className="login-form">
 
-                        {/* Role Select */}
+                        {/* ROLE */}
                         <div className="form-group">
                             <div className="select-wrapper">
+
                                 <select defaultValue="">
-                                    <option value="" disabled>Select Role</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="referee">Referee</option>
-                                    <option value="jockey">Jockey</option>
-                                    <option value="spectator">Spectator</option>
-                                    <option value="horse-owner">Horse Owner</option>
+                                    <option value="" disabled>
+                                        Select Role
+                                    </option>
+
+                                    <option value="referee">
+                                        Referee
+                                    </option>
+
+                                    <option value="jockey">
+                                        Jockey
+                                    </option>
+
+                                    <option value="spectator">
+                                        Spectator
+                                    </option>
+
+                                    <option value="horse-owner">
+                                        Horse Owner
+                                    </option>
                                 </select>
+
                                 <FaChevronDown className="input-icon" />
                             </div>
                         </div>
 
-                        {/* Email */}
+                        {/* EMAIL */}
                         <div className="form-group">
+
                             <label>Email Address</label>
+
                             <div className="input-wrapper">
+
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
                                 />
+
                                 <FaEnvelope className="input-icon" />
                             </div>
                         </div>
 
-                        {/* Password */}
+                        {/* PASSWORD */}
                         <div className="form-group">
+
                             <div className="label-row">
+
                                 <label>Password</label>
+
                                 <a href="#" className="forgot-link">
                                     Forgot password
                                 </a>
                             </div>
 
                             <div className="input-wrapper">
+
                                 <input
                                     type="password"
                                     placeholder="Enter your password"
                                 />
+
                                 <FaEyeSlash className="input-icon" />
                             </div>
                         </div>
 
-                        {/* Remember */}
+                        {/* REMEMBER */}
                         <div className="remember-row">
                             <input type="checkbox" id="remember" />
-                            <label htmlFor="remember">Remember me</label>
+
+                            <label htmlFor="remember">
+                                Remember me
+                            </label>
                         </div>
 
-                        {/* Button */}
-                        <button type="submit" className="login-button">
+                        {/* BUTTON */}
+                        <button
+                            type="submit"
+                            className="login-button"
+                        >
                             Login
                         </button>
 
-                        {/* Register */}
+                        {/* REGISTER */}
                         <div className="register-prompt">
+
                             Don&apos;t have an account?{" "}
-                            <a href="#" className="register-link">
+
+                            <Link
+                                to="/register"
+                                className="register-link"
+                            >
                                 Register here
-                            </a>
+                            </Link>
+
                         </div>
 
                     </form>
+
                 </div>
             </div>
         </div>
