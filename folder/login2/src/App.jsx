@@ -2,7 +2,8 @@ import './App.css';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Navigate
 } from 'react-router-dom';
 
 import Login from './components/Login';
@@ -12,8 +13,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+
+        {/* redirect default path */}
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        {/* pages */}
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
       </Routes>
     </BrowserRouter>
   );
